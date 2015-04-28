@@ -1,0 +1,20 @@
+<h1><%= @restaurant.name %>
+
+<h3> Placeholder menu. Menus will be images that coorelate with the menu of the restaurant, and will be a param of the restaurant similar to the way that pics worked in photogur </h3>
+
+
+
+  <h3>Your reservations for <%= @restaurant.name %></h3>
+
+  <% @restaurant.reservations.each do |res| %>
+    <p>
+      <h3><%= res.time %></h3>
+    </p>
+  <% end %>
+
+
+  <% if current_user %>
+
+  <br/>
+<%= link_to "Make a reservation", "/restaurants/#{@restaurant.id}/reservations/new" %>
+<% end %>

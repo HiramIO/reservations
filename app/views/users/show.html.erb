@@ -1,0 +1,9 @@
+<h1> My Reservations </h1>
+<% @user.reservations.each do |r| %>
+  <li>
+    Restaurant name: <%= r.restaurant.name %><br>
+    Reserved time: <%= r.time %><br>
+    Seats: <%= r.seats %><br>
+  </li>
+
+<% end %>
